@@ -82,3 +82,14 @@ function createBudgetTracker() {
 let budget = createBudgetTracker();
 consol.log(budget(300));
 consol.log(budget(200));
+
+// Task 8 
+function calculateGrowth(years, revenue) {
+  if (years < 10) {
+    return calculateGrowth(years + 1, revenue * 1.05);
+  }
+  return 'Projected Revenue: $${revenue.toFixed(2)}';
+}
+
+consol.log(calculateGrowth(8, 1000));
+consol.log(calculateGrowth(5, 5000));
