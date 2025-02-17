@@ -52,3 +52,11 @@ function calculateShippingCost(weight, location, expedited = false) {
 
 consol.log(calculateShippingCost(10, "USA", true));
 consol.log(calculateShippingCost(5, "Canada", false));
+
+// Task 5
+function calculateLoanInterest(principal, rate, years) {
+  let interest = principal * rate * years;
+  return 'Total Interest: $${interest.toFixed(2)}';
+}
+consol.log(calculateLoanInterest(1000, 0.05, 3));
+consol.log(calculateLoanInterest(5000, 0.07, 5));
