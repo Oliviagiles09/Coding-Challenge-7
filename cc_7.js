@@ -60,3 +60,12 @@ function calculateLoanInterest(principal, rate, years) {
 }
 consol.log(calculateLoanInterest(1000, 0.05, 3));
 consol.log(calculateLoanInterest(5000, 0.07, 5));
+
+// Task 6 
+let transactions = [500, 1200, 3000, 800, 2200];
+
+function filterHighValueTransactions(transactions, filterFunction) {
+  return transactions.filter(filterFunction);
+}
+
+consol.log(filterHighValueTransactions(transactions, amount => amount > 1000));
