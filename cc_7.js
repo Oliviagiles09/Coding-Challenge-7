@@ -34,3 +34,21 @@ let calculateLoyaltyDiscount = (amount, years) => {
 
 consol.log(calculateLoyaltyDiscount(100, 6));
 consol.log(calculateloyaltyDiscount(200, 2));
+
+// Task 4 
+function calculateShippingCost(weight, location, expedited = false) {
+  let baseCost;
+  if (location === "USA") {
+    baseCost = 5 + (0.5 * weight);
+  }
+  else if (location === "Canada") {
+    baseCost = 10 + (0.7 * weight);
+  }
+  if (expedited) {
+    baseCost += 10;
+  }
+  return 'Shipping Cost: $${baseCost.toFixed(2)}';
+};
+
+consol.log(calculateShippingCost(10, "USA", true));
+consol.log(calculateShippingCost(5, "Canada", false));
